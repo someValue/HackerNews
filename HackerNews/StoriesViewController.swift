@@ -81,7 +81,7 @@ class StoriesViewController: UITableViewController,MenuViewControllerDelegate,St
     
     func loadStories(section : PostFilterType) {
         
-        var completion: GetPostsCompletion = {[weak self](posts: [AnyObject]!, urlAddition: String!) -> Void in
+        let completion: GetPostsCompletion = {[weak self](posts: [AnyObject]!, urlAddition: String!) -> Void in
             if let s = self {
                 s.refreshControl?.endRefreshing()
                 if let p = posts as? [HNPost] {
@@ -130,7 +130,7 @@ class StoriesViewController: UITableViewController,MenuViewControllerDelegate,St
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         performSegueWithIdentifier("webSegue", sender: indexPath)
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     override func scrollViewDidScroll(scrollView: UIScrollView) {

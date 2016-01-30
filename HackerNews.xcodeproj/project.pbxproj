@@ -55,8 +55,8 @@
 		0570B6351AC91C7200BBC58A /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570B6341AC91C7200BBC58A /* CommentsViewController.swift */; };
 		05933EA01ACBE852000E199D /* ReplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05933E9F1ACBE852000E199D /* ReplyViewController.swift */; };
 		05999DB91ACE6A2900C382F0 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05999DB81ACE6A2900C382F0 /* UserProfileViewController.swift */; };
-		05D05C341AD3F11A0056DC41 /* icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 05D05C331AD3F11A0056DC41 /* icon-120.png */; };
 		05D6F5791AD39B5800B3A9F1 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D6F5781AD39B5800B3A9F1 /* PostViewController.swift */; };
+		0C460A141C59C72100B5874A /* hn.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C460A131C59C72100B5874A /* hn.json */; };
 		164A4A4A810F1800991484B1 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA79B27AC81AACA93CE145 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,9 +138,9 @@
 		0570B6341AC91C7200BBC58A /* CommentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		05933E9F1ACBE852000E199D /* ReplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyViewController.swift; sourceTree = "<group>"; };
 		05999DB81ACE6A2900C382F0 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		05D05C331AD3F11A0056DC41 /* icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-120.png"; sourceTree = "<group>"; };
 		05D6F5781AD39B5800B3A9F1 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		0C460A111C5875B200B5874A /* HackerNews-BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HackerNews-BridgingHeader.h"; sourceTree = "<group>"; };
+		0C460A131C59C72100B5874A /* hn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hn.json; sourceTree = "<group>"; };
 		66BA79B27AC81AACA93CE145 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8EF32A45599878F59968EE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,8 +178,7 @@
 		053132491AC52553005AEFAE /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
-				0C460A111C5875B200B5874A /* HackerNews-BridgingHeader.h */,
-				05D05C321AD3F10C0056DC41 /* Resources */,
+				0C460A121C58BC7B00B5874A /* Home */,
 				053132B11AC68DCA005AEFAE /* TPKeyboardAvoiding */,
 				0531326C1AC5277D005AEFAE /* Spring */,
 				0531324C1AC52553005AEFAE /* AppDelegate.swift */,
@@ -189,15 +188,12 @@
 				054303641ACE838000F2314F /* SwiftyJSON.swift */,
 				05999DB81ACE6A2900C382F0 /* UserProfileViewController.swift */,
 				05D6F5781AD39B5800B3A9F1 /* PostViewController.swift */,
-				053132AF1AC57C77005AEFAE /* StoryCell.swift */,
 				053132AA1AC53955005AEFAE /* MenuViewController.swift */,
-				053132A81AC5328C005AEFAE /* StoriesViewController.swift */,
 				0570B6321AC91AC700BBC58A /* CommentCell.swift */,
 				0570B6341AC91C7200BBC58A /* CommentsViewController.swift */,
-				053132501AC52553005AEFAE /* Main.storyboard */,
 				05933E9F1ACBE852000E199D /* ReplyViewController.swift */,
-				053132531AC52553005AEFAE /* Images.xcassets */,
-				053132551AC52553005AEFAE /* LaunchScreen.xib */,
+				053132501AC52553005AEFAE /* Main.storyboard */,
+				0C460A111C5875B200B5874A /* HackerNews-BridgingHeader.h */,
 				0531324A1AC52553005AEFAE /* Supporting Files */,
 			);
 			path = HackerNews;
@@ -206,7 +202,10 @@
 		0531324A1AC52553005AEFAE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C460A131C59C72100B5874A /* hn.json */,
+				053132531AC52553005AEFAE /* Images.xcassets */,
 				0531324B1AC52553005AEFAE /* Info.plist */,
+				053132551AC52553005AEFAE /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -263,12 +262,13 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
-		05D05C321AD3F10C0056DC41 /* Resources */ = {
+		0C460A121C58BC7B00B5874A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				05D05C331AD3F11A0056DC41 /* icon-120.png */,
+				053132AF1AC57C77005AEFAE /* StoryCell.swift */,
+				053132A81AC5328C005AEFAE /* StoriesViewController.swift */,
 			);
-			name = Resources;
+			name = Home;
 			sourceTree = "<group>";
 		};
 		88C598836E9BFDEC2E61A29A /* Frameworks */ = {
@@ -355,8 +355,8 @@
 			files = (
 				053132971AC5277D005AEFAE /* Info.plist in Resources */,
 				053132521AC52553005AEFAE /* Main.storyboard in Resources */,
-				05D05C341AD3F11A0056DC41 /* icon-120.png in Resources */,
 				053132571AC52553005AEFAE /* LaunchScreen.xib in Resources */,
+				0C460A141C59C72100B5874A /* hn.json in Resources */,
 				053132541AC52553005AEFAE /* Images.xcassets in Resources */,
 				0531329A1AC5277D005AEFAE /* LoadingView.xib in Resources */,
 			);

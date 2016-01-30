@@ -60,8 +60,8 @@ struct HNService {
             switch resp.result
             {
             case .Success(let data):
-                let json = JSON(data: (data ?? []) as! NSData)
-                response(json)
+                let user = JSON(data ?? [])
+                response(user)
                 
             case .Failure(let error):
                 print("哈哈哈哈  + \(error)")
